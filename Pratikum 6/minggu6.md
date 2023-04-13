@@ -38,6 +38,10 @@ Berikut adalah 10 DNS record yang paling sering dijumpai:
 #
 ## Langkah - Langkah untuk Instalasi dan Konfigurasi DNS
 
+## Demo Konfigurasi DNS
+[Demo Konfigurasi DNS](https://penssby-my.sharepoint.com/:v:/g/personal/3121600012_msoffice_pens_ac_id/EXYdKfakjTZNm6xlm9IzlqYBo82MoojIqwF_K8JhfhEIAw?e=Mp8jVw)
+
+
 ## Instalasi DNS
 1. Melakukan pembaruhan untuk linux (kali ini saya memakai Ubuntu)
 ```
@@ -77,13 +81,17 @@ Berikut adalah 10 DNS record yang paling sering dijumpai:
 
 
 2. Membuat file forward dengan cara mengcopy file db.local
+   
    ![Membuat forward](assets/3.jpeg)
 
    Membuka file forward sesuai dengan tempat file tersebut disimpan
+
    ![membukan-forward](assets/4.jpeg)
 
    Mengganti konfigurasi pada forward
+
    ![Conf-forward](assets/5.jpeg)
+   
    Rubahkan root menjadi ns, localhost name dengan hostname "kampus-06.takehome.com", dan juga IPnya sesuaikan dengan IP anda. lalu ikuti konfigurasi dibawahnya
 
 
@@ -91,15 +99,19 @@ Berikut adalah 10 DNS record yang paling sering dijumpai:
    ![Membuat forward](assets/6.jpeg)
 
    Membuka file reverse sesuai dengan tempat file tersebut disimpan
+
    ![membukan-forward](assets/7.jpeg)
 
    Mengganti konfigurasi pada forward
+
    ![Conf-forward](assets/8.jpeg)
+
    Rubahkan root menjadi ns, localhost name dengan hostname "kampus-06.takehome.com", dan 1.0.0 menjadi bilangan IP okter terakhir anda. lalu ikuti konfigurasi dibawahnya
 
 4. Konfigurasi resolve
 5. 
    ![conf-resolve](assets/resolv.jpeg)
+
 6. Restart Bind9 dan Cek status bind9
    ```
    > systemctl restart bind9.service
@@ -115,4 +127,5 @@ Berikut adalah 10 DNS record yang paling sering dijumpai:
 
 
 2. Melakukan pengujian
+
    ![conf-resolve](assets/11.png)
